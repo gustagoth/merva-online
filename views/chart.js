@@ -26,15 +26,15 @@ fetch('http://merva-online.herokuapp.com/logs.json')
     // configuracion de datos de chart.js
     const data = {
       labels: labels_1,
-      datasets: [{ data: temps_1, fill: false, borderColor: 'red' },
-                 { data: temps_2, fill: false, borderColor: 'blue' },
-                 { data: temps_3, fill: false, borderColor: 'green' },
+      datasets: [{ label: 'CESAC 37', data: temps_1, fill: false, borderColor: 'red' },
+                 { label: 'CESAC 13', data: temps_2, fill: false, borderColor: 'blue' },
+                 { label: 'CESAC 5', data: temps_3, fill: false, borderColor: 'green' },
                 ]
     };
-    let labels = ['CESAC 37','CESAC 13', 'CESAC 5'];
+    
     // config del grafico de chart.js
     const options = {
-      legend: { display: true, labels: labels},
+      legend: { display: true},
       title: {
         display: true, text: 'Grafico de temperaturas'
       },
