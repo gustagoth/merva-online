@@ -5,16 +5,31 @@ fetch('http://merva-online.herokuapp.com/logs.json')
   .then((resJson) => {
     var datos = resJson;
     console.log(datos);  // DEBUG
-    var temps = [];
-    var labels = [];
+    var temps_1 = [];
+    var labels_1 = [];
+    var temps_2 = [];
+    var labels_2 = [];
+    var temps_3 = [];
+    var labels_3 = [];
     for (let log of datos) {
-      temps.push({ x: log.creado, y: log.temp });
-      labels.push(log.creado);
+      if (log.termografo_id == 1) {
+        temps_1.push({ x: log.creado, y: log.temp });
+        labels_1.push(log.creado);
+      } else if (log.termografo_id == 2) {
+        temps_2.push({ x: log.creado, y: log.temp });
+        labels_2.push(log.creado);
+      } else if (log.termografo_id == 3) {
+        temps_3.push({ x: log.creado, y: log.temp });
+        labels_3.push(log.creado);
+      }
     }
     // configuracion de datos de chart.js
     const data = {
-      labels: labels,
-      datasets: [{ data: temps, fill: false, borderColor: 'red' }]
+      labels: [labels_1, labels_2, labels_3],
+      datasets: [{ data: temps_1, fill: false, borderColor: 'red' },
+                 { data: temps_2, fill: false, borderColor: 'blue' },
+                 { data: temps_3, fill: false, borderColor: 'green' },
+                ]
     };
     // config del grafico de chart.js
     const options = {
