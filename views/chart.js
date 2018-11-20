@@ -41,7 +41,7 @@ fetch('http://merva-online.herokuapp.com/logs.json')
       scales: {
         xAxes: [{
           type: 'time',
-          time: { format: 'L LTS', tooltipFormat: 'L LTS' }
+          time: { format: 'll HH:mm', tooltipFormat: 'll HH:mm' }
           //scaleLabel: { display: true, labelString: 'Tiempo' },
           //ticks: { beginAtZero: true, min: 0 }
         }],
