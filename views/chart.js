@@ -1,4 +1,4 @@
-fetch('http://localhost:3000/logs.json')
+fetch('http://merva-online.herokuapp.com/logs.json')
   .then((res) => {
     return res.json();
   })

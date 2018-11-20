@@ -10,7 +10,8 @@ const { Client } = require('pg');
 const app = express();
 
 const client = new Client({
-  connectionString: connectionString
+  connectionString: connectionString,
+  ssl: true
 });
 
 /*

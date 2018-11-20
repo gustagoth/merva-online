@@ -20,7 +20,7 @@ CREATE TABLE logs(
 );
 
 
-INSERT INTO termografos VALUES (1, 'CESAC 37'), (2, 'CESAC 13');
+INSERT INTO termografos VALUES (1, 'CESAC 37'), (2, 'CESAC 13'), (3, 'CESAC 5');
 
 -- testeando
 
