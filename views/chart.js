@@ -31,9 +31,10 @@ fetch('http://merva-online.herokuapp.com/logs.json')
                  { data: temps_3, fill: false, borderColor: 'green' },
                 ]
     };
+    let labels = ['CESAC 37','CESAC 13', 'CESAC 5'];
     // config del grafico de chart.js
     const options = {
-      legend: { display: true},
+      legend: { display: true, labels: labels},
       title: {
         display: true, text: 'Grafico de temperaturas'
       },
