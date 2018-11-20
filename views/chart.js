@@ -33,7 +33,7 @@ fetch('http://merva-online.herokuapp.com/logs.json')
     };
     // config del grafico de chart.js
     const options = {
-      legend: { display: false },
+      legend: { display: true},
       title: {
         display: true, text: 'Grafico de temperaturas'
       },
