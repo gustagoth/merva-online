@@ -17,10 +17,10 @@ fetch('http://merva-online.herokuapp.com/logs.json')
         labels_1.push(log.creado);
       } else if (log.termografo_id == 2) {
         temps_2.push({ x: log.creado, y: log.temp });
-        labels_2.push(log.creado);
+        labels_1.push(log.creado);
       } else if (log.termografo_id == 3) {
         temps_3.push({ x: log.creado, y: log.temp });
-        labels_3.push(log.creado);
+        labels_1.push(log.creado);
       }
     }
     // configuracion de datos de chart.js
