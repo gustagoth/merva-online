@@ -4,16 +4,17 @@ html(lang='es')
     title= title
     link(rel='stylesheet', href='/css/bootstrap.min.css')
     script(src='/js/Chart.min.js')
-    script(src='/js/moment.min.js')
+    // script(src='/js/moment.min.js')
     script(src='/js/jquery-3.3.1.js')
     script(src='/js/bootstrap.min.js')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js")
   body
     nav(class="navbar navbar-expand-lg navbar-light bg-light")
       img(src='/img/merva-logo.png' class='img-fluid' width='300')
     div(class='container-fluid')
       div(class='row')
-        div(class='col-4')  
-          h1 Registros 
+        div(class='col-4')
+          h1 Registros
           table(class='table table-striped')
             thead(class='thead-dark')
               tr
@@ -25,20 +26,20 @@ html(lang='es')
                 tr
                   td= log.creado
                   td= log.temp
-                  td= log.ubicacion 
+                  td= log.ubicacion
 
           //  form(method='POST', action='')
           //    div(class='form-group')
           //      label(for='inputTemp') Temperatura:
           //      input(type='text', id='inputTemp', class='form-control', name='temp')
           //      label(for='inputTermografo') ID Termografo:
-          //      input(type='text', id='inputTermografo', class='form-control', name='termografo_id')    
+          //      input(type='text', id='inputTermografo', class='form-control', name='termografo_id')
           //      button(type='submit', class='btn btn-primary') Enviar
-        div(class='col-8')         
+        div(class='col-8')
           canvas(id='chart')
           script
             include chart.js
       div(class='row')
     footer(class='page-footer font-small blue')
       div(class='container-fluid text-center')
-        p ET N° 37 "Hogar Naval Stella Maris"          
+        p ET N° 37 "Hogar Naval Stella Maris"
