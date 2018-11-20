@@ -3,11 +3,17 @@ const express = require('express');
 const path    = require('path');
 //const mysql   = require('mysql2');
 const moment  = require('moment'); // libreria de JS para laburar con fechas
+const connectionString = process.env.DATABASE_URL;
 const { Client } = require('pg');
 
 // creo el objeto app
 const app = express();
 
+const client = new Client({
+  connectionString: connectionString
+});
+
+/*
 const client = new Client({
   user: 'postgres',
   host: 'localhost',
@@ -15,6 +21,7 @@ const client = new Client({
   password: 'merva1234',
   port: 5432
 });
+*/
 client.connect();
 
 /*
