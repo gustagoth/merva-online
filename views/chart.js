@@ -31,7 +31,7 @@ fetch('http://merva-online.herokuapp.com/logs.json')
                  { label: 'CESAC 5', data: temps_3, fill: false, borderColor: 'green' },
                 ]
     };
-    
+
     // config del grafico de chart.js
     const options = {
       legend: { display: true},
@@ -40,8 +40,10 @@ fetch('http://merva-online.herokuapp.com/logs.json')
       },
       scales: {
         xAxes: [{
-          scaleLabel: { display: true, labelString: 'Tiempo' },
-          ticks: { beginAtZero: true, min: 0 }
+          type: 'time',
+          time: { unit: 'minute' }
+          //scaleLabel: { display: true, labelString: 'Tiempo' },
+          //ticks: { beginAtZero: true, min: 0 }
         }],
         yAxes: [{
           scaleLabel: { display: true, labelString: 'Temperatura' },
