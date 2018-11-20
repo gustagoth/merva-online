@@ -25,7 +25,7 @@ fetch('http://merva-online.herokuapp.com/logs.json')
     }
     // configuracion de datos de chart.js
     const data = {
-      //labels: labels_1,
+      labels: labels_1,
       datasets: [{ label: 'CESAC 37', backgroundColor: 'red', data: temps_1, fill: false, borderColor: 'red' },
                  { label: 'CESAC 13', backgroundColor: 'blue', data: temps_2, fill: false, borderColor: 'blue' },
                  { label: 'CESAC 5', backgroundColor: 'green', data: temps_3, fill: false, borderColor: 'green' },
@@ -40,11 +40,11 @@ fetch('http://merva-online.herokuapp.com/logs.json')
       },
       scales: {
         xAxes: [{
-          type: 'time',
-          time: { displayFormats: { 'minute': 'L LTS'}, tooltipFormat: 'L LTS' },
+          //type: 'time',
+          //time: { displayFormats: { 'minute': 'L LTS'}, tooltipFormat: 'L LTS' },
           //distribution: 'linear',
           scaleLabel: { display: true, labelString: 'Tiempo' },
-          //ticks: { beginAtZero: true, min: 0 }
+          ticks: { beginAtZero: true, min: 0}
         }],
         yAxes: [{
           scaleLabel: { display: true, labelString: 'Temperatura' },
