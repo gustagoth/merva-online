@@ -40,10 +40,11 @@ fetch('http://merva-online.herokuapp.com/logs.json')
       },
       scales: {
         xAxes: [{
-          //type: 'time',
-          //time: { format: 'L LTS', tooltipFormat: 'L LTS' },
+          type: 'time',
+          time: { format: 'L LTS', tooltipFormat: 'L LTS' },
+          distribution: 'linear',
           scaleLabel: { display: true, labelString: 'Tiempo' },
-          ticks: { beginAtZero: true, min: 0 }
+          //ticks: { beginAtZero: true, min: 0 }
         }],
         yAxes: [{
           scaleLabel: { display: true, labelString: 'Temperatura' },
