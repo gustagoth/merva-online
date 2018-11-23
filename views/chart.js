@@ -23,11 +23,9 @@ fetch('http://merva-online.herokuapp.com/logs.json')
         labels_1.push(log.creado);
       }
     }
-    temps_1.push({ x: new Date(), y: 10 });
-    temps_1.push({ x: new Date(2), y: 12 });
     // configuracion de datos de chart.js
     const data = {
-      //labels: labels_1,
+      labels: labels_1,
       datasets: [
                  { label: 'CESAC 37', backgroundColor: 'red', data: temps_1, fill: false, borderColor: 'red' },
                  { label: 'CESAC 13', backgroundColor: 'blue', data: temps_2, fill: false, borderColor: 'blue' },
@@ -43,11 +41,11 @@ fetch('http://merva-online.herokuapp.com/logs.json')
       },
       scales: {
         xAxes: [{
-          type: 'time',
-          time: { unit: 'second' },
+          //type: 'time',
+          //time: { unit: 'second' },
           //distribution: 'linear',
-          //scaleLabel: { display: true, labelString: 'Tiempo' },
-          //ticks: { beginAtZero: true, min: 0}
+          scaleLabel: { display: true, labelString: 'Tiempo' },
+          ticks: { beginAtZero: true, min: 0}
 
         }],
         yAxes: [{
