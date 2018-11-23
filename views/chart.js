@@ -23,6 +23,8 @@ fetch('http://merva-online.herokuapp.com/logs.json')
         labels_1.push(log.creado);
       }
     }
+    temps_1.push({ x: new Date(), y: 10 });
+    temps_1.push({ x: new Date(2), y: 12 });
     // configuracion de datos de chart.js
     const data = {
       //labels: labels_1,
