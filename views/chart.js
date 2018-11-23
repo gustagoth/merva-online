@@ -44,7 +44,7 @@ fetch('http://merva-online.herokuapp.com/logs.json')
           type: 'time',
           time: { unit: 'second' },
           //distribution: 'linear',
-          scaleLabel: { display: true, labelString: 'Tiempo' },
+          //scaleLabel: { display: true, labelString: 'Tiempo' },
           //ticks: { beginAtZero: true, min: 0}
 
         }],
