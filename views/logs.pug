@@ -25,7 +25,7 @@ html(lang='es')
               each log in logs
                 tr
                   td= log.creado
-                  td= log.temp
+                  td {#log.temp} ºC
                   td= log.ubicacion
 
           //  form(method='POST', action='')

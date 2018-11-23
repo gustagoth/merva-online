@@ -31,4 +31,12 @@ INSERT INTO logs(creado, temp, termografo_id) VALUES
 INSERT INTO logs(creado, temp, termografo_id) VALUES
   ('2018-11-21 03:03:03', 24.3, 1) ON CONFLICT DO NOTHING;
 
+INSERT INTO logs(temp, termografo_id) VALUES (1.3, 1);
+INSERT INTO logs(temp, termografo_id) VALUES (3.5, 2);
+INSERT INTO logs(temp, termografo_id) VALUES (4.3, 3);
+INSERT INTO logs(temp, termografo_id) VALUES (2.3, 1);
+INSERT INTO logs(temp, termografo_id) VALUES (1.3, 2);
+INSERT INTO logs(temp, termografo_id) VALUES (4.2, 3);
 INSERT INTO logs(temp, termografo_id) VALUES (6.5, 1);
+INSERT INTO logs(temp, termografo_id) VALUES (4.1, 2);
+INSERT INTO logs(temp, termografo_id) VALUES (3.9, 3);
