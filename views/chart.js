@@ -25,7 +25,7 @@ fetch('http://merva-online.herokuapp.com/logs.json')
     }
     // configuracion de datos de chart.js
     const data = {
-      labels: labels_1,
+      //labels: labels_1,
       datasets: [
                  { label: 'CESAC 37', backgroundColor: 'red', data: temps_1, fill: false, borderColor: 'red' },
                  { label: 'CESAC 13', backgroundColor: 'blue', data: temps_2, fill: false, borderColor: 'blue' },
