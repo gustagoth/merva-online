@@ -6,23 +6,22 @@ fetch('http://merva-online.herokuapp.com/logs.json')
     var datos = resJson;
     console.log(datos);  // DEBUG
     var temps_1 = [];
-    var labels_1 = [];
+    var labels = [];
     var temps_2 = [];
-    var labels_2 = [];
+
     var temps_3 = [];
-    var labels_3 = [];
+
     for (let log of datos) {
       if (log.termografo_id == 1) {
         temps_1.push({ x: log.creado, y: log.temp });
-        labels_1.push(log.creado);
       } else if (log.termografo_id == 2) {
         temps_2.push({ x: log.creado, y: log.temp });
-        labels_1.push(log.creado);
       } else if (log.termografo_id == 3) {
         temps_3.push({ x: log.creado, y: log.temp });
-        labels_1.push(log.creado);
       }
+      labels.push(log.creado);
     }
+
     // configuracion de datos de chart.js
     const data = {
       labels: labels_1,
