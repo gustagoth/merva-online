@@ -3,7 +3,8 @@ const express = require('express');
 const path    = require('path');
 //const mysql   = require('mysql2');
 const moment  = require('moment'); // libreria de JS para laburar con fechas
-const connectionString = process.env.DATABASE_URL;
+// const connectionString = process.env.DATABASE_URL;
+const connectionString = 'postgresql://postgres:merva1234@localhost:5432/merva';
 const { Client } = require('pg');
 
 // creo el objeto app
@@ -11,7 +12,7 @@ const app = express();
 
 const client = new Client({
   connectionString: connectionString,
-  ssl: true
+  // ssl: true
 });
 
 /*
